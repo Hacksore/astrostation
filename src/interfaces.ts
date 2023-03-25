@@ -115,8 +115,8 @@ export interface ISongState {
 }
 
 export interface IBackground {
-  isBackground: number;
-  setIsBackground: (isBackground: number) => void;
+  backgroundId: number;
+  setBackgroundId: (backgroundId: number) => void;
 }
 
 export interface IToggleTasks {

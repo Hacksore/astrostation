@@ -440,8 +440,8 @@ export const useSong = create<ISongState>((set) => ({
 export const useSetBackground = create<IBackground>(
   persist(
     (set, _) => ({
-      isBackground: 0,
-      setIsBackground: (isBackground) => set({ isBackground }),
+      backgroundId: 0,
+      setBackgroundId: (backgroundId) => set({ backgroundId }),
     }),
     {
       name: "app_background",

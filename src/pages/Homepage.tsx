@@ -58,13 +58,13 @@ export const HomePage = ({ backgrounds }: { backgrounds: any }) => {
   const [isSettingsModalOpen, setSettingsModalOpen] = useState(false);
   const [isConfigureWidgetModalOpen, setIsConfigureWidgetModalOpen] =
     useState(false);
-  const { isBackground } = useSetBackground();
+  const { backgroundId } = useSetBackground();
   const [isBackgroundModalOpen, setIsBackgroundModalOpen] = useState(false);
   const { grid } = useGrid();
 
   return (
     <div className="h-screen">
-      {isBackground == backgrounds.UNSPLASH && <UnsplashFooter />}
+      {backgroundId == backgrounds.UNSPLASH && <UnsplashFooter />}
       <div className={"flex justify-end flex-wrap py-2 px-2 gap-2 ml-auto w-5/6"}>
         <div className="settingsButton">
           <CustomizationButton

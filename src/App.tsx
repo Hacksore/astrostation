@@ -13,7 +13,11 @@ import { Walkthrough } from "@Components/Walkthrough/Walkthrough";
 import useSetDefault from "@App/utils/hooks/useSetDefault";
 import clsx from "clsx";
 
-enum backgrounds {
+/**
+ * This is a background image that is supported
+ */
+export enum Background {
+  BLACK,
   CITY,
   FADE,
   GRADIENT,
@@ -49,7 +53,7 @@ function App() {
   return (
     <>
       {isFirstTimeUser && <Walkthrough />}
-      <Backgrounds backgrounds={backgrounds} />
+      <Backgrounds />
       <div
         className={clsx(
           "fixed inset-0 overflow-auto",
@@ -58,7 +62,7 @@ function App() {
       >
         <Toaster />
         <SideNav />
-        <HomePage backgrounds={backgrounds} />
+        <HomePage backgrounds={Background} />
       </div>
     </>
   );
